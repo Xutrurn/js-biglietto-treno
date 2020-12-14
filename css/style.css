@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  align-items: center;
+  /* align-content: center; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 50%;
+  margin: auto;
+  max-width: 1070px;
+  /* background-color: lightgrey; */
+}
+
+.box1 {
+  width: 75%;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 1.05rem;
+  font-weight: bolder;
+  border-radius: 4px 4px 0 0;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  line-height: 1.6;
+  z-index: -1;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3)
+    /* overflow: hidden; */
+    /* height: 10%; */
+    /* min-width: 200px; */
+    /* justify-content: flex-start; */
+    /* background-color: yellowgreen; */
+}
+
+#clip {
+  background: url(https://media.giphy.com/media/l0Iy3KAFUA28TsKKk/giphy.gif) repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+
+.box2 {
+  height: 90%;
+  min-width: 200px;
+  font-size: 2.5rem;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  border-top: 3px solid black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 4px;
+  color: white;
+  font-weight: bold;
+  background-image: linear-gradient(to right top, #0089ba, #00aac9, #00c7b1, #00de77, #a8eb12);
+  line-height: 1.6;
+  position: relative;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3)
+    /* background-color: lightblue; */
+    /* width: 100%; */
+}
+
+.color-change-2x {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #65fc46);
+  background-size: 500% 500%;
+  -webkit-animation: color-change-2x 12s linear infinite alternate both;
+  animation: color-change-2x 12s linear infinite alternate both;
+}
+
+
+
+@keyframes color-change-2x {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.box3 {
+  display: flex;
+  color: white;
+  padding: 4px;
+  /* background-color: yellow; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: .8rem;
+  font-weight: lighter;
+}
+
+.typewriter p {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 7.5s steps(60, end),
+    blink-caret .25s step-end infinite;
+  animation-iteration-count: infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange;
+  }
+}
+
+.tracking-in-expand {
+  animation: tracking-in-expand .7s cubic-bezier(.215, .61, .355, 1.000) both
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.text-focus-in {
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(.55, .085, .68, .53) both;
+  animation: text-focus-in 1.5s cubic-bezier(.55, .085, .68, .53) both
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1
+  }
+}
